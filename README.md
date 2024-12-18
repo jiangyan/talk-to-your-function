@@ -1,36 +1,82 @@
-# Client Side Tool Calling with the OpenAI WebRTC Realtime API
+# Voice-Controlled Car and Math Hands Demo
 
-This project is a [Cloudflare Workers](https://developers.cloudflare.com) app using [Hono](https://honojs.dev) to relay the [OpenAI Realtime API](https://platform.openai.com/docs/api-reference/realtime) over WebRTC. The main files are just [static assets](https://developers.cloudflare.com/workers/static-assets/).
+This project demonstrates real-time voice control of a virtual car and hand gestures using the OpenAI Realtime API over WebRTC. Built with Cloudflare Workers and Hono, it provides an interactive interface where you can control a car's movement and manipulate virtual hand gestures using voice commands.
 
-[<img src="https://img.youtube.com/vi/TcOytsfva0o/0.jpg">](https://youtu.be/TcOytsfva0o "Client Side Tool Calling with the OpenAI WebRTC Realtime API")
+[Add your demo video/image here]
 
+## Features
 
-## Develop
+### Car Control
+- Voice-controlled car movement (up, down, left, right)
+- Adjustable speed settings (0-5)
+- Real-time visual feedback
+- Smooth animation and boundary detection
 
-Copy [.dev.vars.example](./.dev.vars.example) to `.dev.vars` and fill out your OpenAI API Key.
+### Math & Hand Gestures
+- Interactive virtual hands with individual finger control
+- Visual math calculations using finger positions
+- Support for complex finger combinations
+- Real-time finger counting display
 
-Install your dependencies
+## Voice Commands
 
+### Car Control
+- "Move the car [up/down/left/right]"
+- "Stop the car"
+- "Set speed to [0-5]"
+
+### Hand Control
+- "What is [number] plus [number]?"
+- "Raise [left/right] [finger name]" (thumb, index, middle, ring, pinky)
+- "Show [number] fingers"
+- "Raise left index and right thumb"
+- "Reset hands"
+
+## Getting Started
+
+1. Clone the repository
+2. Copy `.dev.vars.example` to `.dev.vars` and add your OpenAI API Key:
+```bash
+OPENAI_API_KEY="your-key-here"
+```
+
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-Run local server
-
+4. Run locally:
 ```bash
 npm run dev
 ```
 
-## Deploy
+## Deployment
 
-Upload your secret
-
+1. Upload your OpenAI API Key to Cloudflare:
 ```bash
 npx wrangler secret put OPENAI_API_KEY
 ```
 
+2. Deploy to Cloudflare Workers:
 ```bash
 npm run deploy
 ```
 
-The hand is a [HiWonder AI Hand](https://www.hiwonder.com/products/aihand?variant=41022039654487). AI and I reverse-engineered the mobile app to make it work over Bluetooth, see [the code in hand.js](./public/hand.js)
+## Technical Stack
+
+- **Frontend**: HTML5 Canvas, WebRTC, JavaScript
+- **Backend**: Cloudflare Workers, Hono framework
+- **Voice Processing**: OpenAI Realtime API
+- **Real-time Communication**: WebRTC
+
+## Development
+
+The project uses:
+- HTML5 Canvas for rendering the car and hands
+- WebRTC for real-time voice communication
+- OpenAI's Realtime API for voice command processing
+- Cloudflare Workers for hosting and API routing
+
+## License
+
+[Add your license information here]
