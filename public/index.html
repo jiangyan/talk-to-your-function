@@ -3,19 +3,43 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Just a website</title>
+	<title>Voice Controlled Car & Math Hands</title>
 	<link rel="stylesheet" href="/styles.css">
-	<script src="/hand.js"></script>
 	<script src="/script.js"></script>
 </head>
 <body>
 	<div class="content">
-		<h1>This is a plain old website</h1>
-		<p>This is just a plain website that is using plain old JavaScript</p>
-		<button onclick="talkToTheHand()">Talk to the hand</button>
+		<h1>Voice Interactive Demo</h1>
+		<p>Speak commands to control:</p>
+		<div class="split-container">
+			<div class="left-section">
+				<h2>Car Control</h2>
+				<ul>
+					<li>"Move the car [up/down/left/right]"</li>
+					<li>"Stop the car"</li>
+					<li>"Set speed to [0-5]"</li>
+				</ul>
+				<div id="car-container">
+					<canvas id="carCanvas" width="600" height="400"></canvas>
+					<div id="speed-indicator">Speed: <span id="current-speed">0</span></div>
+				</div>
+			</div>
+			<div class="right-section">
+				<h2>Math & Finger Control</h2>
+				<ul>
+					<li>"What is [number] plus [number]?"</li>
+					<li>"Raise [left/right] [finger name]" (thumb, index, middle, ring, pinky)</li>
+					<li>"Show [number] fingers"</li>
+					<li>"Raise left index and right thumb"</li>
+					<li>"Reset hands"</li>
+				</ul>
+				<div id="hands-container">
+					<canvas id="handsCanvas" width="600" height="400"></canvas>
+					<div id="math-result">Fingers up: <span id="current-result">0</span></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<footer>
-		<p>Built with 🧡 on <a href="https://developers.cloudflare.com">Cloudflare Workers</a> and the <a href="https://platform.openai.com/docs/api-reference/realtime">OpenAI Realtime API</a></p>
-	</footer>
+	<footer></footer>
 </body>
 </html>
