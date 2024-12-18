@@ -77,6 +77,31 @@ The project uses:
 - OpenAI's Realtime API for voice command processing
 - Cloudflare Workers for hosting and API routing
 
+## Credits & Attribution
+
+This project is a modified version of [talk-to-javascript-openai-workers](https://github.com/craigsdennis/talk-to-javascript-openai-workers) by Craig Dennis. The original project demonstrated WebRTC and OpenAI Realtime API integration. This version has been adapted to create a voice-controlled car and math visualization demo while maintaining the same technical foundation.
+
+Key modifications include:
+- Added virtual car control system with voice commands
+- Implemented virtual hands for math visualization
+- Enhanced UI/UX for interactive demonstrations
+- Added real-time visual feedback systems
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ## License
 
-[Add your license information here]
+This project is licensed under the same terms as the original project by Craig Dennis. Please refer to the [original repository](https://github.com/craigsdennis/talk-to-javascript-openai-workers) for license details.
+
+## Acknowledgments
+
+- [Craig Dennis](https://github.com/craigsdennis) for the original WebRTC implementation
+- [OpenAI](https://openai.com) for the Realtime API
+- [Cloudflare Workers](https://workers.cloudflare.com) for hosting infrastructure
+- [Hono](https://honojs.dev) for the backend framework
